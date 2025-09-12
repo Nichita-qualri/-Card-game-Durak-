@@ -5,4 +5,5 @@
 struct Card {
 	Suit suit;
 	Rank rank;
+
 };
