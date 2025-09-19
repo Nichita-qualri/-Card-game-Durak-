@@ -14,3 +14,4 @@ Durak este un joc de cărți jucat cu un pachet de 36 de cărți. Scopul jocului
 - **Deck**: reprezintă pachetul de cărți
 - **Player**: reprezintă un jucător (mână, nume)
 - **GameEngine**: implementează logica jocului (atac, apărare, distribuire cărți)
+- **Board**: reprezintă masa de joc, pe care poate fi plasată colona de cărți
