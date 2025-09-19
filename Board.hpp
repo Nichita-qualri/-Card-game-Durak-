@@ -1,4 +1,5 @@
 #pragma once
+#include "Deck.hpp"
 
 class Board {
     int _width;
