@@ -7,4 +7,9 @@
 struct Player {
 	std::string name;
 	std::vector<Card> hand;
+
+    void addCard(Card card);    
+    void removeCard(int index); 
+    void showHand();            
+    int handSize();
 };
