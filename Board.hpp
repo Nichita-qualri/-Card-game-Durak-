@@ -1,9 +1,10 @@
-
 #pragma once
+#include "Deck.hpp"
 
 class Board {
     int _width;
     int _height;
+    int _lenght;
 public:
-    Board(int width = 28, int height = 31);
+    Board(int width = 90, int height = 150, int lenght = 75);
 };
