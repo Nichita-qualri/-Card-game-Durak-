@@ -5,4 +5,10 @@ enum class Suit {
 	Diamonds,
 	Clubs,
 	Spades
+
+class SuitHelper{
+public:
+	SuitHelper() {}
+
+	static const char* ToString(Suit suit);
 };

@@ -7,4 +7,11 @@
 struct GameEngine {
 	Deck deck;
 	std::vector<Player> players;
+
+public:
+	GameEngine();
+	void Init();
+	void Run();
+
+	void addPlayer(const Player& player);	
 };

@@ -11,3 +11,10 @@ enum class Rank {
 	King,
 	Ace
 };
+
+class RankHelper {
+public:
+	RankHelper{}
+
+	static const char* ToString(Rank, rank);
+};
