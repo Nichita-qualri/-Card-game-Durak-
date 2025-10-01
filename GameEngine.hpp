@@ -10,7 +10,6 @@ struct GameEngine {
 
 public:
 	GameEngine();
-	void Init();
 	void Run();
 
 	void addPlayer(const Player& player);	

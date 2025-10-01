@@ -4,6 +4,7 @@ Deck::Deck() {
 }
 
 void Deck::shuffle() {
+    // To do
 }
 
 Card Deck::dealCard() {
@@ -23,3 +24,5 @@ int Deck::size() const {
 void Deck::AddCard(const Card& card) {
     cards.push_back(card);
 }
+
+Suit

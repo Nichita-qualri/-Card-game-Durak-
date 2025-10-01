@@ -1,14 +1,15 @@
 #pragma once
 
 enum class Suit {
-	Hearts,
-	Diamonds,
-	Clubs,
-	Spades
+    Hearts,
+    Diamonds,
+    Clubs,
+    Spades
+};
 
-class SuitHelper{
+class SuitHelper {
 public:
-	SuitHelper() {}
-
-	static const char* ToString(Suit suit);
+    SuitHelper() {}
+    static const char* ToString(Suit suit);      
+    static const char* ToSymbol(Suit suit);      
 };

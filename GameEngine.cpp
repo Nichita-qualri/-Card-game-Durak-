@@ -3,14 +3,14 @@
 
 GameEngine::GameEngine() {}
 
-void GameEngine::Init() {
+void GameEngine::Run() {
 	deck.shuffle();
-	std::cout << "Game initialized with " << std::endl;
+	// To do: deal cards to players
+	deck.setTrumpSuit();
+	Suit trump = deck.getTrumpSuit();
+	std::cout << "Game initialized with trump suit: " << static_cast<int>(trump) << std::endl;
 }
 
-void GameEngine::Run() {
-	std::cout << "Game started with " << std::endl;
-	}
 void GameEngine::addPlayer(const Player& player) {
 	players.push_back(player);
 }

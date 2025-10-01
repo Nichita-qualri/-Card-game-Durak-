@@ -3,10 +3,19 @@
 #include "Rank.hpp"
 #include <string>
 
-struct Card {
+class Card {
 	Suit suit;
 	Rank rank;
+	bool isTrump;
 
-	Card(Suit s, Rank r);
-	std::string toString() const;
-};
+public:
+    Card(Suit suit, Rank rank, bool isTrump);
+
+    std::string toString() const;
+    bool beats(const Card& other) const;
+    std::string shortString() const;
+
+    Suit getSuit() const { return suit; }
+    Rank getRank() const { return rank; }
+    bool getIsTrump() const { return isTrump; }
+};;
