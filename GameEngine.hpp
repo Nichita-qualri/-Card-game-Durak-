@@ -1,10 +1,14 @@
 #pragma once
 #include <vector>
-#include "Deck.cpp"
+#include "Deck.hpp"
 #include "Player.hpp"
-#include "Board.hpp"
 
 struct GameEngine {
-	Deck deck;
-	std::vector<Player> players;
+    Deck deck;
+    std::vector<Player> players;
+
+public:
+    GameEngine();
+    void Run();
+    void addPlayer(const Player& player);
 };

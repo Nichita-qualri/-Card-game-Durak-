@@ -1,14 +1,14 @@
 #pragma once
 #include <vector>
-#include "Card.cpp"
 #include <string>
+#include "Card.hpp"
 
 struct Player {
-	std::string name;
-	std::vector<Card> hand;
+    std::string name;
+    std::vector<Card> hand;
 
-    void addCard(Card card);    
-    void removeCard(int index); 
-    void showHand();            
-    int handSize();
+    void addCard(const Card& card);    
+    void removeCard(int index);        
+    void showHand() const;             
+    int handSize() const;              
 };
