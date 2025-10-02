@@ -1,10 +1,14 @@
 #pragma once
-#include "Deck.hpp"
 
 class Board {
     int _width;
     int _height;
-    int _lenght;
+    int _length;
+
 public:
-    Board(int width = 90, int height = 150, int lenght = 75);
+    Board(int width = 90, int height = 150, int length = 75);
+
+    int GetWidth() const;
+    int GetHeight() const;
+    int GetLength() const;
 };
