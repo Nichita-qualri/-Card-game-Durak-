@@ -4,7 +4,7 @@
 
 class Deck {
     std::vector<Card> cards;
-	Suit trumpSuit;
+    Suit trumpSuit;
 
 public:
     Deck();
@@ -12,8 +12,13 @@ public:
     Card dealCard();
     bool isEmpty() const;
     int size() const;
-    Suit getTrumpSuit() const { return cards.back().getSuit(); }
-    void setTrumpSuit() const { trumpSuit = cards.back().getSuit(); }
+    Suit getTrumpSuit() const {
+        return cards.back().getSuit();
+    }
+
+    void setTrumpSuit() {
+        trumpSuit = cards.back().getSuit();
+    }
+
     void AddCard(const Card& card);
 };
-

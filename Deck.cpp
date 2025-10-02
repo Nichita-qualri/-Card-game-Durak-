@@ -24,5 +24,3 @@ int Deck::size() const {
 void Deck::AddCard(const Card& card) {
     cards.push_back(card);
 }
-
-
