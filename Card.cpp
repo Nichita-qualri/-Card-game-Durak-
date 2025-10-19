@@ -1,13 +1,26 @@
 ﻿#include "Card.hpp"
-#include <string>
 
-Card::Card(Suit suit, Rank rank, bool isTrump)
-    : suit(suit), rank(rank), isTrump(isTrump) {
+Card::Card() : suit(Suit::Hearts), rank(Rank::Six), isTrump(false) {}
+
+Card::Card(Suit s, Rank r, bool trump) : suit(s), rank(r), isTrump(trump) {}
+
+Card::Card(const Card& other) : suit(other.suit), rank(other.rank), isTrump(other.isTrump) {}
+
+Card Card::operator=(const Card& other) {
+    suit = other.suit;
+    rank = other.rank;
+    isTrump = other.isTrump;
+    return *this;
 }
 
-std::string Card::toString() const {
-    return "Card(" + std::to_string(static_cast<int>(suit)) + ", "
-        + std::to_string(static_cast<int>(rank)) + ")";
+bool Card::operator==(const Card& other) const {
+    return suit == other.suit && rank == other.rank && isTrump == other.isTrump;
+}
+
+std::string Card::shortString() const {
+    std::string ranks = "6789JQKA";
+    std::string suits = "♠♣♥♦";
+    return std::string(1, ranks[static_cast<int>(rank)]) + suits[static_cast<int>(suit)];
 }
 
 bool Card::beats(const Card& other) const {
@@ -17,8 +30,15 @@ bool Card::beats(const Card& other) const {
     return false;
 }
 
-std::string Card::shortString() const {
-    std::string ranks = "6789JQKA";
-    std::string suits = "♠♣♥♦";
-    return std::string(1, ranks[static_cast<int>(rank)]) + suits[static_cast<int>(suit)];
+std::istream& operator>>(std::istream& in, Card& card) {
+    int s, r;
+    bool trump;
+    in >> s >> r >> trump;
+    card = Card(static_cast<Suit>(s), static_cast<Rank>(r), trump);
+    return in;
+}
+
+std::ostream& operator<<(std::ostream& out, const Card& card) {
+    out << card.shortString();
+    return out;
 }
