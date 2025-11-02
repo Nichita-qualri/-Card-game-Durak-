@@ -1,12 +1,15 @@
-#include "Painter.hpp"
+#pragma once
+#include "abstract_painter.hpp"
 #include <iostream>
+#include <string>
 
-void Painter::DrawImage(Point topLeft, Point bottomRight, char** image) {
-    std::cout << "DrawImage from (" << topLeft.x << "," << topLeft.y
-        << ") to (" << topLeft.x << "," << topLeft.y << ")\n";
-}
-
-void Painter::WriteText(Point position, char* text) {
-    std::cout << "WriteText at (" << position.x << "," << position.y
-        << "): " << text << std::endl;
-}
+class Painter : public AbstractPainter {
+public:
+    void DrawImage(Point topLeft, Point bottomRight, char** image) override {
+        std::cout << "Drawing image from (" << topLeft.x << "," << topLeft.y << ") "
+            << "to (" << bottomRight.x << "," << bottomRight.y << ")" << std::endl;
+    }
+    void WriteText(Point position, const std::string& text) override {
+        std::cout << "Text at (" << position.x << "," << position.y << "): " << text << std::endl;
+    }
+};
