@@ -1,28 +1,27 @@
 #pragma once
 #include <vector>
+#include <memory>
+#include <algorithm>
 #include "Card.hpp"
-#include <iostream>
 
 class Deck {
-    std::vector<Card> cards;
+    std::vector<CardPtr> cards;
     Suit trumpSuit;
-
 public:
     Deck();
     Deck(const Deck& other);
 
-    Deck operator=(const Deck& other);
-    bool operator==(const Deck& other) const;
-
     void shuffle();
-    Card dealCard();
+    CardPtr dealCard();
     bool isEmpty() const;
     int size() const;
-
-    Suit getTrumpSuit() const { return trumpSuit; }
+    void addCard(CardPtr card);
     void setTrumpSuit();
-    void addCard(const Card& card);
+    Suit getTrumpSuit() const;
+
+    Deck& operator=(const Deck& other);
+    bool operator==(const Deck& other) const;
 };
 
-std::istream& operator>>(std::istream& in, Deck& deck);
 std::ostream& operator<<(std::ostream& out, const Deck& deck);
+std::istream& operator>>(std::istream& in, Deck& deck);

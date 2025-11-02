@@ -1,11 +1,13 @@
 #pragma once
-#pragma once
-#include "Card.hpp"
-#include "Player.hpp"
-#include <iostream>
+#include <string>
 
-struct AbstractPainter {
-    virtual void DrawImage(int x, int y, char** image) = 0;
-    virtual void WriteText(int x, int y, const std::string& text) = 0;
+struct Point {
+    int x;
+    int y;
+    Point(int _x = 0, int _y = 0) : x(_x), y(_y) {}
 };
 
+struct AbstractPainter {
+    virtual void DrawImage(Point topLeft, Point bottomRight, char** image) = 0;
+    virtual void WriteText(Point position, const std::string& text) = 0;
+};
