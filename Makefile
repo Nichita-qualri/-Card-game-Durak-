@@ -1,7 +1,7 @@
 ﻿CXX = g++
 SRC_DIR = src
 INC_DIR = include
-LIB_DIR = libs
+LIB_DIR = lib
 CXXFLAGS = -c -Wall -std=c++17 -I$(INC_DIR)
 
 SFML_DIR = C:/SFML-3.0.2
