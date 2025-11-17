@@ -1,10 +1,10 @@
 #include <iostream>
 #include <memory>
-#include "GameEngine.hpp"
-#include "Player.hpp"
-#include "Card.hpp"
-#include "Deck.hpp"
-#include "Painter.hpp"
+#include "game_engine.hpp"
+#include "player.hpp"
+#include "card.hpp"
+#include "deck.hpp"
+#include "painter.hpp"
 
 int main() {
     GameEngine engine;

@@ -1,4 +1,4 @@
-#include "Deck.hpp"
+#include "deck.hpp"
 #include <random>
 #include <chrono>
 #include <iostream>

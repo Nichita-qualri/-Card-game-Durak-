@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include <memory>
-#include "Suit.hpp"
-#include "Rank.hpp"
+#include "suit.hpp"
+#include "rank.hpp"
 
 class Card {
     Suit suit;
@@ -18,6 +18,7 @@ public:
 
     Card& operator=(const Card& other);
     bool operator==(const Card& other) const;
+    bool operator!=(const Card& other) const;
     bool operator<(const Card& other) const;
 
     Suit getSuit() const { return suit; }

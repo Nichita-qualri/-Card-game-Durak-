@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
 #include <memory>
-#include "Deck.hpp"
-#include "Player.hpp"
+#include "deck.hpp"
+#include "player.hpp"
 
 class GameEngine {
     Deck deck;

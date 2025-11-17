@@ -1,4 +1,4 @@
-﻿#include "Suit.hpp"
+﻿#include "suit.hpp"
 
 const char* SuitHelper::ToString(Suit suit) {
     switch (suit) {

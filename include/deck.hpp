@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "Card.hpp"
+#include "card.hpp"
 
 class Deck {
     std::vector<CardPtr> cards;
@@ -21,6 +21,8 @@ public:
 
     Deck& operator=(const Deck& other);
     bool operator==(const Deck& other) const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Deck& deck);
 };
 
 std::ostream& operator<<(std::ostream& out, const Deck& deck);
