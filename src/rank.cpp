@@ -1,4 +1,4 @@
-#include "Rank.hpp"
+#include "rank.hpp"
 
 const char* RankHelper::ToString(Rank rank) {
     switch (rank) {

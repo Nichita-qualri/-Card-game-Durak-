@@ -1,4 +1,4 @@
-﻿#include "Card.hpp"
+﻿#include "card.hpp"
 #include <iostream>
 
 Card::Card(Suit s, Rank r, bool trump) : suit(s), rank(r), isTrump(trump) {}

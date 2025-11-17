@@ -2,7 +2,7 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "Card.hpp"
+#include "card.hpp"
 
 class Deck {
     std::vector<CardPtr> cards;

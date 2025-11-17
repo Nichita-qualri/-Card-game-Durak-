@@ -2,7 +2,7 @@
 #include <vector>
 #include <memory>
 #include <string>
-#include "Card.hpp"
+#include "card.hpp"
 
 class Player {
     std::string name;
