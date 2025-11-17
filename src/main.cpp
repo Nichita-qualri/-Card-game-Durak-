@@ -1,6 +1,6 @@
 #include <iostream>
 #include <memory>
-#include "GameEngine.hpp"
+#include "game_engine.hpp"
 #include "player.hpp"
 #include "card.hpp"
 #include "deck.hpp"

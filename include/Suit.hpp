@@ -10,6 +10,6 @@ enum class Suit {
 class SuitHelper {
 public:
     SuitHelper() {}
-    static const char* ToString(Suit suit);      
-    static const char* ToSymbol(Suit suit);      
+    static const char* ToString(Suit suit);
+    static const char* ToSymbol(Suit suit);
 };

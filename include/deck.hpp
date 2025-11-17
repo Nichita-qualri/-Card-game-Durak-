@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include <memory>
 #include <algorithm>
@@ -21,6 +21,8 @@ public:
 
     Deck& operator=(const Deck& other);
     bool operator==(const Deck& other) const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Deck& deck);
 };
 
 std::ostream& operator<<(std::ostream& out, const Deck& deck);

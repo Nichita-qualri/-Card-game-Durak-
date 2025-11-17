@@ -2,6 +2,7 @@
 #include <iostream>
 
 Card::Card(Suit s, Rank r, bool trump) : suit(s), rank(r), isTrump(trump) {}
+
 Card::Card(const Card& other) : suit(other.suit), rank(other.rank), isTrump(other.isTrump) {}
 
 Card& Card::operator=(const Card& other) {
@@ -15,6 +16,10 @@ bool Card::operator==(const Card& other) const {
     return suit == other.suit && rank == other.rank && isTrump == other.isTrump;
 }
 
+bool Card::operator!=(const Card& other) const {
+    return !(*this == other);
+}
+
 bool Card::operator<(const Card& other) const {
     if (isTrump != other.isTrump) return isTrump > other.isTrump;
     if (suit == other.suit) return static_cast<int>(rank) < static_cast<int>(other.rank);
@@ -26,7 +31,8 @@ std::string Card::toString() const {
 }
 
 std::string Card::shortString() const {
-    std::string ranks = "6789JQKA";
+    // ИСПРАВЛЕНО: добавлена "T" для Ten
+    std::string ranks = "6789TJQKA";
     std::string suits = "♠♣♥♦";
     return std::string(1, ranks[static_cast<int>(rank)]) + suits[static_cast<int>(suit)];
 }

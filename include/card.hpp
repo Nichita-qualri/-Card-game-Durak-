@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include <memory>
 #include "suit.hpp"
@@ -18,6 +18,7 @@ public:
 
     Card& operator=(const Card& other);
     bool operator==(const Card& other) const;
+    bool operator!=(const Card& other) const;
     bool operator<(const Card& other) const;
 
     Suit getSuit() const { return suit; }
