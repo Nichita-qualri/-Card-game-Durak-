@@ -31,10 +31,17 @@ std::string Card::toString() const {
 }
 
 std::string Card::shortString() const {
-    // ИСПРАВЛЕНО: добавлена "T" для Ten
     std::string ranks = "6789TJQKA";
-    std::string suits = "♠♣♥♦";
-    return std::string(1, ranks[static_cast<int>(rank)]) + suits[static_cast<int>(suit)];
+
+    std::string suitSymbol;
+    switch (suit) {
+    case Suit::Spades:   suitSymbol = "♠"; break;  
+    case Suit::Clubs:    suitSymbol = "♣"; break;  
+    case Suit::Hearts:   suitSymbol = "♥"; break;  
+    case Suit::Diamonds: suitSymbol = "♦"; break;  
+    }
+
+    return std::string(1, ranks[static_cast<int>(rank)]) + suitSymbol;
 }
 
 bool Card::beats(const Card& other) const {

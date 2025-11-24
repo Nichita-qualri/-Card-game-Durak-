@@ -1,12 +1,16 @@
-#include <iostream>
+﻿#include <iostream>
 #include <memory>
+#include <windows.h> 
 #include "game_engine.hpp"
 #include "player.hpp"
 #include "card.hpp"
 #include "deck.hpp"
-#include "painter.hpp"
+#include "painter.hpp" 
 
 int main() {
+    SetConsoleCP(CP_UTF8);         
+    SetConsoleOutputCP(CP_UTF8);   
+
     GameEngine engine;
 
     engine.addPlayer(std::make_shared<Player>("Alice"));
@@ -14,12 +18,6 @@ int main() {
 
     engine.run();
 
-    Painter painter;
-    Point topLeft(0, 0);
-    Point bottomRight(5, 5);
-    char* image[1] = { nullptr };
-    painter.DrawImage(topLeft, bottomRight, image);
-    painter.WriteText(Point(1, 1), "Welcome to the game!");
 
     std::cout << std::endl << "Players info via operator<<:" << std::endl;
     for (auto& player : { std::make_shared<Player>("Alice"), std::make_shared<Player>("Bob") }) {

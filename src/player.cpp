@@ -1,6 +1,13 @@
-#include "player.hpp"
+﻿#include "player.hpp"
 #include <iostream>
 #include <algorithm>
+#include <windows.h> 
+HANDLE hConsole_p = GetStdHandle(STD_OUTPUT_HANDLE);
+const WORD BRIGHT_WHITE_p = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+
+void resetColor_p() {
+    SetConsoleTextAttribute(hConsole_p, BRIGHT_WHITE_p);
+}
 
 Player::Player(const std::string& n) : name(n) {}
 Player::Player(const Player& other) : name(other.name), hand(other.hand) {}
@@ -30,10 +37,11 @@ void Player::removeCard(int index) {
 }
 
 void Player::showHand() const {
-    std::cout << name << "'s hand: ";
-    for (auto& card : hand)
-        std::cout << card->shortString() << " ";
+    resetColor_p();
+    for (size_t i = 0; i < hand.size(); ++i)
+        std::cout << "[" << i << "]" << hand[i]->shortString() << " ";
     std::cout << std::endl;
+    resetColor_p();
 }
 
 int Player::handSize() const {
