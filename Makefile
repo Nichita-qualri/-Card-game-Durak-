@@ -2,26 +2,28 @@
 SRC_DIR = src
 INC_DIR = include
 LIB_DIR = lib
-CXXFLAGS = -c -Wall -std=c++17 -I$(INC_DIR)
+EXECUTABLE = CardGameDurak
+
+CXXFLAGS = -c -Wall -std=c++17 -I$(INC_DIR) -D_WIN32
 
 SFML_DIR = C:/SFML-3.0.2
+
 SFML_LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 
-EXTERNAL_LIBS = $(SFML_LIBS) -lm
+EXTERNAL_LIBS = $(SFML_LIBS) -lm -lgdi32 -luser32
+
 
 LIB_CORE = libcore.a
-LIB_GAME = libgame.a
-
 CORE_SRCS = card.cpp rank.cpp suit.cpp
 CORE_OBJS = $(CORE_SRCS:.cpp=.o)
 
+LIB_GAME = libgame.a
 GAME_SRCS = deck.cpp player.cpp
 GAME_OBJS = $(GAME_SRCS:.cpp=.o)
 
 APP_SRCS = main.cpp game_engine.cpp painter.cpp
 APP_OBJS = $(APP_SRCS:.cpp=.o)
 
-EXECUTABLE = CardGameDurak
 
 all: $(LIB_DIR)/$(LIB_CORE) $(LIB_DIR)/$(LIB_GAME) $(EXECUTABLE)
 
