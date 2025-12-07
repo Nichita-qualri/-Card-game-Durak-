@@ -1,4 +1,11 @@
-﻿#include "player.hpp"
+﻿/**
+ * @file player.cpp
+ * @brief Implementation of Player class methods
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
+#include "player.hpp"
 #include <iostream>
 #include <algorithm>
 #include <windows.h> 

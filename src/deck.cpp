@@ -1,3 +1,10 @@
+/**
+ * @file deck.cpp
+ * @brief Implementation of Deck class methods
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
 #include "deck.hpp"
 #include <random>
 #include <chrono>

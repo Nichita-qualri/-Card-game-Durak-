@@ -1,4 +1,12 @@
-﻿#pragma once
+﻿/**
+ * @file deck.hpp
+ * @brief Card deck management
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
+#pragma once
 #include <vector>
 #include <memory>
 #include <algorithm>

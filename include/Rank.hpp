@@ -1,3 +1,11 @@
+/**
+ * @file rank.hpp
+ * @brief Card rank enumeration and utilities
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
 #pragma once
 
 enum class Rank {

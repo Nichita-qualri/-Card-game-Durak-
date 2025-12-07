@@ -1,4 +1,12 @@
-﻿#pragma once
+﻿/**
+ * @file card.hpp
+ * @brief Playing card representation
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
+#pragma once
 #include <string>
 #include <memory>
 #include "suit.hpp"
