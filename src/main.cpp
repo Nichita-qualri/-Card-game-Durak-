@@ -1,4 +1,11 @@
-﻿#include <iostream>
+﻿/**
+ * @file main.cpp
+ * @brief Entry point for Durak card game application
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
+#include <iostream>
 #include <memory>
 #include <windows.h> 
 #include "game_engine.hpp"

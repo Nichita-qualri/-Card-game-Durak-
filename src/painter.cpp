@@ -1,4 +1,11 @@
-﻿#include "painter.hpp"
+﻿/**
+ * @file painter.cpp
+ * @brief Implementation of Painter class methods
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
+#include "painter.hpp"
 #include <iostream>
 #include <string>
 

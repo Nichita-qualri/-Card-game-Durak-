@@ -1,3 +1,11 @@
+/**
+ * @file painter.hpp
+ * @brief Concrete painter implementation
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
 #pragma once
 #include "abstract_painter.hpp"
 #include <iostream>

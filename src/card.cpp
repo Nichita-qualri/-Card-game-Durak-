@@ -1,4 +1,11 @@
-﻿#include "card.hpp"
+﻿/**
+ * @file card.cpp
+ * @brief Implementation of Card class methods
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
+#include "card.hpp"
 #include <iostream>
 
 Card::Card(Suit s, Rank r, bool trump) : suit(s), rank(r), isTrump(trump) {}

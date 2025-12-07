@@ -1,3 +1,11 @@
+/**
+ * @file abstract_painter.hpp
+ * @brief Abstract painter interface for drawing operations
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
 #pragma once
 #include <string>
 

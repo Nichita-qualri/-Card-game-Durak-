@@ -1,3 +1,11 @@
+/**
+ * @file player.hpp
+ * @brief Player representation and hand management
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
 #pragma once
 #include <vector>
 #include <memory>

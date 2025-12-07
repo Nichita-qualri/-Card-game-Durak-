@@ -1,4 +1,11 @@
-﻿#include "game_engine.hpp"
+﻿/**
+ * @file game_engine.cpp
+ * @brief Implementation of GameEngine class - main game loop and logic
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
+#include "game_engine.hpp"
 #include <iostream>
 #include <algorithm>
 #include <limits>

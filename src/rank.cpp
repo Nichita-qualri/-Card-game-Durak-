@@ -1,3 +1,10 @@
+/**
+ * @file rank.cpp
+ * @brief Implementation of RankHelper utility functions
+ * @author Nichita-qualri
+ * @date December 2025
+ */
+
 #include "rank.hpp"
 
 const char* RankHelper::ToString(Rank rank) {

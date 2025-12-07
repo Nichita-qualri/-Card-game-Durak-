@@ -1,4 +1,12 @@
-﻿#pragma once
+﻿/**
+ * @file game_engine.hpp
+ * @brief Main game logic controller
+ * @project Durak Card Game
+ * @author Nichita-qualri
+ * @date 2025
+ */
+
+#pragma once
 #include <vector>
 #include <memory>
 #include "deck.hpp"
